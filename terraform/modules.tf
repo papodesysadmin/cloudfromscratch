@@ -22,3 +22,11 @@ module "alb" {
     subnetid_2  = var.subnetid_2
     instance_id = module.ec2.instance_id
 }
+
+module "rds" {
+    source              = "./modules/rds"
+    #aws_region          = var.aws_region
+    #vpcid               = var.vpcid
+    #subnetid            = var.subnetid
+    #securitygroup_id    = module.securitygroup.teste_securitygroup_id
+}
